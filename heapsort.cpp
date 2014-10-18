@@ -1,13 +1,13 @@
-/*Ğ¡¸ù¶Ñ*/
+/*å †æ’åºï¼Œå°æ ¹å †*/
 #include <iostream>
 using namespace std;
 void HeapSift(int A[], int k, int n) {
 	int i = k, j = 2*i;
 	while (j <= n) {
-		if (j<n && A[j]>A[j+1]) { //É¸Ñ¡µÄ½Úµã 
+		if (j<n && A[j]>A[j+1]) { //ç­›é€‰çš„èŠ‚ç‚¹ 
 		 ++j;
 	}
-	if (A[i] < A[j]) { //·ûºÅĞ¡¸ù¶ÑµÄÌõ¼ş£¬½áÊø 
+	if (A[i] < A[j]) { //ç¬¦å·å°æ ¹å †çš„æ¡ä»¶ï¼Œç»“æŸ 
 		break;
 	}
 	else {
@@ -26,7 +26,7 @@ int main() {
 	for (i=1; i<=n; ++i) {
 		cin>>f[i];
 	}
-	for (i=n/2; i>=1; --i) { //½¨¶Ñ 
+	for (i=n/2; i>=1; --i) { //å»ºå † 
 		HeapSift(f, i, n);
 	}
 	for (i=1; i<n; ++i) {
